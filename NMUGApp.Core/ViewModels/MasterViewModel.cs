@@ -11,11 +11,15 @@ namespace NMUGApp.Core.ViewModels
 {
     public class MasterViewModel : MvxViewModel
     {
+        private readonly IMvxNavigationService _navigationService;
         private readonly IPressReleaseService _pressReleaseService;
         private readonly MvxObservableCollection<Result> _pressReleases;
         private long _pageNumber;
         private long _pageSize;
         private MvxCommand _fetchNext;
+        private MvxCommand _showDetail;
+        private Result _selectedResult;
+        private MvxCommand<Result> _itemSelected;
 
         public MvxObservableCollection<Result> PressReleases => _pressReleases;
 
@@ -33,11 +37,11 @@ namespace NMUGApp.Core.ViewModels
 
         public MvxCommand FetchNext => _fetchNext ?? (_fetchNext = new MvxCommand(async () => { await GetNextPageOfPressReleases(PageNumber + 1); }));
 
+        public MvxCommand<Result> SelectResult => _itemSelected ?? (_itemSelected = new MvxCommand<Result>(DoSelectResult));
 
-
-
-        public MasterViewModel(IPressReleaseService pressReleaseService)
+        public MasterViewModel(IMvxNavigationService navigationService, IPressReleaseService pressReleaseService)
         {
+            _navigationService = navigationService;
             _pressReleaseService = pressReleaseService;
             _pressReleases = new MvxObservableCollection<Result>();
 
@@ -57,6 +61,11 @@ namespace NMUGApp.Core.ViewModels
             PageNumber = result.Metadata.Resultset.Page;
 
             PressReleases.AddRange(result.Results);
+        }
+
+        private async void DoSelectResult(Result result)
+        {
+            await _navigationService.Navigate<DetailViewModel, string>(result.Body);
         }
     }
 }

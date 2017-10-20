@@ -5,7 +5,7 @@ using MvvmCross.Core.ViewModels;
 
 namespace NMUGApp.Core.ViewModels
 {
-    public class DetailViewModel : MvxViewModel
+    public class DetailViewModel : MvxViewModel<string>
     {
         private string _body;
         private string _title;
@@ -20,6 +20,12 @@ namespace NMUGApp.Core.ViewModels
         {
             get => _body;
             set => SetProperty(ref _body, value);
+        }
+
+        /// <inheritdoc />
+        public override void Prepare(string parameter)
+        {
+            Body = parameter;
         }
     }
 }
