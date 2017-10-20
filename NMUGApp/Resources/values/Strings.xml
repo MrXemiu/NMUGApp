@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">NMUGApp</string>
+  <string name="drawer_open">Open navigation drawer</string>
+  <string name="drawer_close">Close navigation drawer</string>
   <string name="editUsername">username</string>
   <string name="editPassword">password</string>
+  <string name="btnNext">Fetch next 2 articles</string>
   <item name="visible" type="id"/>
   <item name="masked" type="id"/>
 </resources>
