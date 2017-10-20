@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NMUGApp", "NMUGApp\NMUGApp.csproj", "{24D0AA43-DECE-405A-9256-77C442575818}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NMUGApp.Core", "NMUGApp.Core\NMUGApp.Core.csproj", "{3DDF6611-53A9-4CE4-A630-96B7B9F2B5A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NMUGApp.Core", "NMUGApp.Core\NMUGApp.Core.csproj", "{3DDF6611-53A9-4CE4-A630-96B7B9F2B5A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
