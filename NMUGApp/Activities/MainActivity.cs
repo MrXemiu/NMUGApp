@@ -1,19 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
+﻿using Android.App;
+using Android.Content.PM;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
-using Android.Widget;
+using MvvmCross.Droid.Support.V7.AppCompat;
+using NMUGApp.Core.ViewModels;
 
 namespace NMUGApp.Activities
 {
-    [Activity(Label = "MainActivity")]
-    public class MainActivity : Activity
+    [Activity(
+        Label = "Main",
+        LaunchMode = LaunchMode.SingleTop,
+        WindowSoftInputMode = SoftInput.StateHidden,
+        Name = nameof(NMUGApp.MainActivity))]
+    public class MainActivity : MvxAppCompatActivity<MainViewModel>
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
