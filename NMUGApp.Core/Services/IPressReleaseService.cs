@@ -8,6 +8,6 @@ namespace NMUGApp.Core.Services
 {
     public interface IPressReleaseService
     {
-        Task<PressReleaseQueryResult> GetPressReleaseQueryResult(int pageNumber);
+        Task<PressReleaseQueryResult> GetPressReleaseQueryResult(int pageSize, int pageNumber);
     }
 }
