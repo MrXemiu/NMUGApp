@@ -13,7 +13,7 @@ namespace NMUGApp.Activities
         MainLauncher = true,
         NoHistory = true,
         LaunchMode = LaunchMode.SingleTop,
-        Name = nameof(LoginActivity))]
+        Name = "NMUGApp.Activities.LoginActivity")]
     public class LoginActivity : MvxAppCompatActivity<LoginViewModel>
     {
         protected override void OnCreate(Bundle savedInstanceState)
