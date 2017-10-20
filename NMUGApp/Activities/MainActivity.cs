@@ -11,7 +11,7 @@ namespace NMUGApp.Activities
         Label = "Main",
         LaunchMode = LaunchMode.SingleTop,
         WindowSoftInputMode = SoftInput.StateHidden,
-        Name = nameof(NMUGApp.MainActivity))]
+        Name = nameof(MainActivity))]
     public class MainActivity : MvxAppCompatActivity<MainViewModel>
     {
         protected override void OnCreate(Bundle savedInstanceState)
