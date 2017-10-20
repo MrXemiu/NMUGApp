@@ -4,14 +4,12 @@
 //
 //    var data = PressReleaseQueryResult.FromJson(jsonString);
 //
-namespace QuickType
+
+using System.Collections.Generic;
+using Newtonsoft.Json;
+
+namespace NMUGApp.Core.Models
 {
-    using System;
-    using System.Net;
-    using System.Collections.Generic;
-
-    using Newtonsoft.Json;
-
     public partial class PressReleaseQueryResult
     {
         [JsonProperty("metadata")]

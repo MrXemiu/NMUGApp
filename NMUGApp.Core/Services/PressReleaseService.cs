@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using QuickType;
+using NMUGApp.Core.Models;
 
 namespace NMUGApp.Core.Services
 {
@@ -17,7 +17,7 @@ namespace NMUGApp.Core.Services
             _httpClient = httpClient;
         }
 
-        public async Task<PressReleaseQueryResult> GetPressReleaseQueryResult(int pageSize, int pageNumber)
+        public async Task<PressReleaseQueryResult> GetPressReleaseQueryResult(long pageSize, long pageNumber)
         {
             var apiUriBase = new UriBuilder(DojPressReleaseApiUrlBase);
 

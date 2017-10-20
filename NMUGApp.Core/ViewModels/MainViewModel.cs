@@ -7,5 +7,9 @@ namespace NMUGApp.Core.ViewModels
 {
     public class MainViewModel : MvxViewModel
     {
+        public void ShowMasterView()
+        {
+            ShowViewModel<MasterViewModel>();
+        }
     }
 }

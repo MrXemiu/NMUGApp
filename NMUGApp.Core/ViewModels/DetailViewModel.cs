@@ -7,5 +7,19 @@ namespace NMUGApp.Core.ViewModels
 {
     public class DetailViewModel : MvxViewModel
     {
+        private string _body;
+        private string _title;
+
+        public string Title
+        {
+            get => _title;
+            set => SetProperty(ref _title, value);
+        }
+
+        public string Body
+        {
+            get => _body;
+            set => SetProperty(ref _body, value);
+        }
     }
 }

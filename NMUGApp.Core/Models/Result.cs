@@ -4,11 +4,12 @@
 //
 //    var data = PressReleaseQueryResult.FromJson(jsonString);
 //
-namespace QuickType
-{
-    using System.Collections.Generic;
 
-    using Newtonsoft.Json;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+
+namespace NMUGApp.Core.Models
+{
     public partial class Result
     {
         [JsonProperty("component")]

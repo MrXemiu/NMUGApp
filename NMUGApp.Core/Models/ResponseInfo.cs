@@ -4,10 +4,11 @@
 //
 //    var data = PressReleaseQueryResult.FromJson(jsonString);
 //
-namespace QuickType
-{
 
-    using Newtonsoft.Json;
+using Newtonsoft.Json;
+
+namespace NMUGApp.Core.Models
+{
     public partial class ResponseInfo
     {
         [JsonProperty("developerMessage")]

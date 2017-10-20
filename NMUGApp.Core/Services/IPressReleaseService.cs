@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using QuickType;
+using NMUGApp.Core.Models;
 
 namespace NMUGApp.Core.Services
 {
     public interface IPressReleaseService
     {
-        Task<PressReleaseQueryResult> GetPressReleaseQueryResult(int pageSize, int pageNumber);
+        Task<PressReleaseQueryResult> GetPressReleaseQueryResult(long pageSize, long pageNumber);
     }
 }
